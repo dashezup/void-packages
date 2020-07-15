@@ -1,0 +1,21 @@
+Dash Eclipse's Void Linux Repository
+------------------------------------
+
+Packages: dwm, st
+
+
+st
+--
+
+Font: Fira Code Medium
+
+https://st.suckless.org/patches/scrollback/
+https://st.suckless.org/patches/nordtheme/
+
+
+dwm
+---
+
+Color: nordtheme based
+
+https://dwm.suckless.org/patches/systray/
