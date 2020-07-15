@@ -1,11 +1,11 @@
 # Template file for 'dwm'
 pkgname=dwm
 version=6.2
-revision=1
+revision=2
 patch_args="-Np1"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 short_desc="Dynamic window manager for X"
-maintainer="Nathan Owens <ndowens04@gmail.com>"
+maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
 homepage="http://dwm.suckless.org"
 distfiles="https://dl.suckless.org/dwm/dwm-${version}.tar.gz"
