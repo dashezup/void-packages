@@ -1,10 +1,10 @@
 # Template file for 'dwm'
 pkgname=dwm
 version=6.2
-revision=4
+revision=5
 patch_args="-Np1"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
-depends="cowsay fortune-mod fortune-mod-anarchism fortune-mod-void terminus-font slock st"
+depends="slock st"
 short_desc="Dynamic window manager for X"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
