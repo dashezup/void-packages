@@ -1,0 +1,80 @@
+https://tools.suckless.org/slock/patches/dpms/
+
+From 7c0aadbed47bff19657ed4b4555d1f554ef50293 Mon Sep 17 00:00:00 2001
+From: Dash Eclipse <dash@ezup.dev>
+Date: Thu, 16 Jul 2020 10:16:08 +0000
+Subject: [PATCH 3/3] patch dpms
+
+---
+ config.def.h |  3 +++
+ slock.c      | 20 ++++++++++++++++++++
+ 2 files changed, 23 insertions(+)
+
+diff --git a/config.def.h b/config.def.h
+index e6bdf97..90f5b1d 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -12,6 +12,9 @@ static const char *colorname[NUMCOLS] = {
+ /* treat a cleared input like a wrong password (color) */
+ static const int failonclear = 1;
+ 
++/* time in seconds before the monitor shuts down */
++static const int monitortime = 5;
++
+ /* default message */
+ static const char * message = "Suckless: Software that sucks less.";
+ 
+diff --git a/slock.c b/slock.c
+index f6a3ca8..5aa7d47 100644
+--- a/slock.c
++++ b/slock.c
+@@ -15,6 +15,7 @@
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <X11/extensions/Xrandr.h>
++#include <X11/extensions/dpms.h>
+ #include <X11/extensions/Xinerama.h>
+ #include <X11/keysym.h>
+ #include <X11/Xlib.h>
+@@ -412,6 +413,7 @@ main(int argc, char **argv) {
+ 	const char *hash;
+ 	Display *dpy;
+ 	int i, s, nlocks, nscreens;
++	CARD16 standby, suspend, off;
+ 	int count_fonts;
+ 	char **font_names;
+ 
+@@ -487,6 +489,20 @@ main(int argc, char **argv) {
+ 	if (nlocks != nscreens)
+ 		return 1;
+ 
++	/* DPMS magic to disable the monitor */
++	if (!DPMSCapable(dpy))
++		die("slock: DPMSCapable failed\n");
++	if (!DPMSEnable(dpy))
++		die("slock: DPMSEnable failed\n");
++	if (!DPMSGetTimeouts(dpy, &standby, &suspend, &off))
++		die("slock: DPMSGetTimeouts failed\n");
++	if (!standby || !suspend || !off)
++		die("slock: at least one DPMS variable is zero\n");
++	if (!DPMSSetTimeouts(dpy, monitortime, monitortime, monitortime))
++		die("slock: DPMSSetTimeouts failed\n");
++
++	XSync(dpy, 0);
++
+ 	/* run post-lock command */
+ 	if (argc > 0) {
+ 		switch (fork()) {
+@@ -504,5 +520,9 @@ main(int argc, char **argv) {
+ 	/* everything is now blank. Wait for the correct password */
+ 	readpw(dpy, &rr, locks, nscreens, hash);
+ 
++	 /* reset DPMS values to inital ones */
++	DPMSSetTimeouts(dpy, standby, suspend, off);
++	XSync(dpy, 0);
++
+ 	return 0;
+ }
+-- 
+2.27.0
+
