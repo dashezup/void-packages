@@ -1,10 +1,11 @@
 # Template file for 'slock'
 pkgname=slock
 version=1.4
-revision=3
+revision=4
 patch_args="-Np1"
 hostmakedepends="pkg-config"
 makedepends="libXrandr-devel libXinerama-devel"
+depends="terminus-font"
 short_desc="Simple screen locker for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
