@@ -1,37 +1,11 @@
 Dash Eclipse's Void Linux Repository
 ------------------------------------
 
-Packages: dwm, st
+[pkg]	[patches/notes]
 
-
-st
---
-
-Font: Fira Code Medium
-
-https://st.suckless.org/patches/scrollback/
-https://st.suckless.org/patches/nordtheme/
-
-
-dwm
----
-
-Color: nordtheme based
-
-https://dwm.suckless.org/patches/systray/
-
-
-lilo
-----
-
-[syslinux] [PATCH] keytab-lilo: update to support kbd 2.0.3 format
-https://www.syslinux.org/archives/2015-December/024690.html
-https://repo.or.cz/syslinux.git/commit/138e850fab106b5235178848b3e0d33e25f4d3a2
-
-
-slock
------
-
-https://tools.suckless.org/slock/patches/capscolor/
-https://tools.suckless.org/slock/patches/message/
-https://tools.suckless.org/slock/patches/dpms/
+dwm	systray, nordtheme color
+lilo	keytab-lilo patch
+scroll	#new
+slock	capscolor, message, dpms
+st	scrollback, nordtheme
+trojan	#new
