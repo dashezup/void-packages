@@ -1,0 +1,22 @@
+# Template file for 'dwl'
+pkgname=dwl
+version=0.1
+revision=1
+build_style=gnu-makefile
+make_use_env=yes
+hostmakedepends="git"
+makedepends="pkg-config pixman-devel wayland-protocols wayland-scanner++ wlroots-devel xcb-util-errors-devel xcb-util-wm-devel"
+short_desc="dwm for Wayland"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/djpohly/dwl"
+
+do_fetch() {
+        git clone --depth 1 https://github.com/djpohly/dwl.git ${wrksrc}
+        commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
+        sed -i 's/printf("Usage:/printf("dwl (git-91b18d4)\\nUsage:/' ${wrksrc}/dwl.c
+}
+
+do_install() {
+        vinstall dwl 755 /usr/bin
+}

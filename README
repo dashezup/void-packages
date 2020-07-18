@@ -3,9 +3,10 @@ Dash Eclipse's Void Linux Repository
 
 [pkg]	[patches/notes]
 
+dwl	#new #git
 dwm	systray, nordtheme color
 lilo	keytab-lilo patch
-scroll	#new
+scroll	#new #git
 slock	capscolor, message, dpms
 st	scrollback, scrollback-mouse, nordtheme
 trojan	#new
