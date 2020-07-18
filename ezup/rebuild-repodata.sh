@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#openssl genrsa -des3 -out privkey.pem 4096
+#./xbps-src binary-bootstrap
+
 #rm hostdir/binpkgs/{musl,aarch64}/{*-repodata,*.xbps.sig}
 rm hostdir/binpkgs/musl/*-repodata
 rm hostdir/binpkgs/musl/*.sig
