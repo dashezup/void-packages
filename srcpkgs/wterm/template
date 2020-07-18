@@ -1,0 +1,38 @@
+# Template file for 'wterm'
+pkgname=wterm
+version=0.7
+revision=1
+archs="i686* x86_64*"
+build_style=gnu-makefile
+make_use_env=compliant
+hostmakedepends="git pkg-config wayland-devel"
+makedepends="fontconfig-devel libdrm-devel libxkbcommon-devel pixman-devel wayland-devel"
+short_desc="st fork for wayland"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/majestrate/wterm"
+
+do_fetch() {
+        git clone --depth 1 https://github.com/majestrate/wterm.git ${wrksrc}
+        commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
+        sed -i '/VERSION/s/$/-${commit_id}/' ${wrksrc}/config.mk
+}
+
+do_install() {
+        vbin wterm
+        vman wterm.1
+        tic -s wterm.info
+        vinstall wterm.info 644 usr/share/terminfo/w wterm.terminfo
+        vdoc README.md
+        vlicense LICENSE
+        vinstall contrib/logo/wterm.svg 644 /usr/share/icons/hicolor/scalable/apps/wterm.svg
+        vinstall contrib/logo/wterm.png 644 /usr/share/icons/hicolor/scalable/apps/wterm.png
+}
+
+wterm-terminfo_package() {
+        short_desc+=" - terminfo data"
+        archs=noarch
+        pkg_install() {
+                vmove usr/share/terminfo
+        }
+}
