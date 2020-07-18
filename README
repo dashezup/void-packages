@@ -7,5 +7,5 @@ dwm	systray, nordtheme color
 lilo	keytab-lilo patch
 scroll	#new
 slock	capscolor, message, dpms
-st	scrollback, nordtheme
+st	scrollback, scrollback-mouse, nordtheme
 trojan	#new
