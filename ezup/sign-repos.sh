@@ -7,7 +7,7 @@ REPOS="$MAINREPO/musl $MAINREPO/aarch64"
 ARCHS="x86_64-musl armv7l-musl aarch64-musl"
 
 for f in ${REPOS}; do
-    export XBPS_PASSPHRASE="password"  # password
+    export XBPS_PASSPHRASE="$XBPS_PASSPHRASE"
     for x in ${ARCHS}; do
        export XBPS_TARGET_ARCH=$x
        xbps-rindex -v -s \
