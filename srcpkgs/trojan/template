@@ -1,7 +1,7 @@
 # Template file for 'trojan'
 pkgname=trojan
 version=1.16.0
-revision=4
+revision=5
 wrksrc="${pkgname}-${version}"
 build_style="cmake"
 configure_args="-DENABLE_MYSQL=OFF -DENABLE_SSL_KEYLOG=OFF -DENABLE_TLS13_CIPHERSUITES=OFF -DSYSTEMD_SERVICE=OFF"
@@ -15,10 +15,10 @@ checksum=86cdb2685bb03a63b62ce06545c41189952f1ec4a0cd9147450312ed70956cbc
 
 system_accounts="${pkgname}"
 
-make_dirs="
- /etc/${pkgname} 0750 trojan trojan
- /var/log/${pkgname} 0750 trojan trojan"
+make_dirs="/etc/${pkgname} 0750 trojan trojan"
 
 post_install() {
-        vsv ${pkgname}
+	chown trojan:trojan /etc/trojan/config.json
+	chmod 664 /etc/trojan/config.json
+	vsv ${pkgname}
 }
