@@ -1,5 +1,7 @@
 case "${ACTION}" in
 post)
+	chown trojan:trojan /etc/trojan/config.json
+	chmod 660 /etc/trojan/config.json
         setcap cap_net_bind_service,cap_net_admin+ep usr/bin/trojan
         ;;
 esac
