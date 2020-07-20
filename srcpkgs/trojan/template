@@ -1,7 +1,7 @@
 # Template file for 'trojan'
 pkgname=trojan
 version=1.16.0
-revision=1
+revision=2
 wrksrc="${pkgname}-${version}"
 build_style="cmake"
 configure_args="-DENABLE_MYSQL=OFF -DENABLE_SSL_KEYLOG=OFF -DENABLE_TLS13_CIPHERSUITES=OFF -DSYSTEMD_SERVICE=OFF"
@@ -12,3 +12,10 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/trojan-gfw/trojan"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=86cdb2685bb03a63b62ce06545c41189952f1ec4a0cd9147450312ed70956cbc
+
+system_accounts="trojan"
+#make_dirs="/etc/${pkgname} 0750 trojan trojan"
+
+post_install() {
+        vsv ${pkgname}
+}

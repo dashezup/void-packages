@@ -1,0 +1,2 @@
+#!/bin/sh
+exec chpst -u trojan:trojan trojan -c /etc/trojan/config.json 1>/dev/null
