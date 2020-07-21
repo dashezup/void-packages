@@ -3980,4 +3980,4 @@ libtexlua53.so.5 texlive-LuaTeX-20200406_1
 libptexenc.so.1 texlive-20200406_1
 libdolphinvcs.so.5 dolphin-20.04.3_1
 
-libydotool.so ydotool-0.1.8_1
+libydotool.so ydotool-devel-0.1.8_2

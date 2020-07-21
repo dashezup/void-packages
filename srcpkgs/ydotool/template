@@ -1,14 +1,28 @@
 # Template file for 'ydotool'
 pkgname=ydotool
 version=0.1.8
-revision=1
+revision=2
 wrksrc="${pkgname}-${version}"
 build_style="cmake"
 makedepends="boost-devel libevdevPlus-devel libuInputPlus-devel"
+depends="ydotool-${version}_${revision}"
 short_desc="Generic command-line automation tool (no X!), works on Wayland"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
 homepage="https://github.com/ReimuNotMoe/ydotool"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=6ebc4ede0a11aa7ced6b52637a4a59cc1528b4c5ed54478d38f0248a40b40a07
-shlib_provides="libydotool.so"
+
+post_install() {
+	vinstall ${FILESDIR}/80-uinput.rules 644 usr/lib/udev/rules.d
+	vsv ydotoold
+}
+
+ydotool-devel_package() {
+	short_desc+=" - development files"
+	shlib_provides="libydotool.so"
+	pkg_install() {
+		vmove "usr/lib/*.a"
+		vmove "usr/lib/*.so"
+	}
+}

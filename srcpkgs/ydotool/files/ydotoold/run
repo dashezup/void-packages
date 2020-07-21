@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ydotoold 2>&1
