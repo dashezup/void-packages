@@ -1,0 +1,30 @@
+# Template file for 'pass'
+pkgname=pass
+version=1.7.3
+revision=3
+archs=noarch
+wrksrc="password-store-${version}"
+build_style=gnu-makefile
+make_install_args="WITH_BASHCOMP=yes WITH_ZSHCOMP=yes WITH_FISHCOMP=yes"
+make_check_target=test
+hostmakedepends="git"
+depends="bash gnupg2 tree"
+#checkdepends="${depends} git"
+short_desc="Stores, retrieves, generates, and synchronizes passwords securely (git version)"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-2.0-or-later"
+homepage="https://www.passwordstore.org"
+
+do_fetch() {
+	git clone --depth 1 https://git.zx2c4.com/password-store ${wrksrc}
+	commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
+	sed -i "s/       v1.7.3       /v1.7.3 (git-${commit_id})/" ${wrksrc}/src/password-store.sh
+}
+
+passmenu_package() {
+	short_desc="Dmenu-based interface to pass"
+	depends="dmenu xdotool ${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vbin contrib/dmenu/passmenu
+	}
+}

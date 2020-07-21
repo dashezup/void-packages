@@ -1,11 +1,11 @@
 # Template file for 'scroll'
 pkgname=scroll
 version=0.1
-revision=1
+revision=2
 build_style=gnu-makefile
 hostmakedepends="git"
 makedepends="musl-legacy-compat"
-short_desc="scrollbackbuffer program for st"
+short_desc="scrollbackbuffer program for st (git version)"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="ISC"
 homepage="https://git.suckless.org/scroll"

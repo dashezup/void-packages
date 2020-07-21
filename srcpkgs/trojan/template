@@ -14,7 +14,6 @@ distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=86cdb2685bb03a63b62ce06545c41189952f1ec4a0cd9147450312ed70956cbc
 
 system_accounts="${pkgname}"
-
 make_dirs="/etc/trojan 0750 trojan trojan"
 
 post_install() {
