@@ -1,13 +1,13 @@
 Dash Eclipse's Void Linux Repository
 ------------------------------------
 
-[pkg]	[patches/notes]
+  [pkg]		[git]	[patches/notes]
 
-dwl	#new #git
-dwm	systray, nordtheme color
-lilo	keytab-lilo patch
-scroll	#new #git
-slock	capscolor, message, dpms
-st	scrollback, scrollback-mouse, nordtheme
-trojan	#new
-wterm	#new #git
+* dwl		*
+  dwm			systray, nordtheme color
+  lilo			keytab-lilo patch
+  pass		*
+* scroll	*
+  slock			scrollback, scrollback-mouse, nordtheme
+* trojan
+* wterm		*
