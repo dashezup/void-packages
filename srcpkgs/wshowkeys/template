@@ -1,0 +1,18 @@
+# Template file for 'wshowkeys'
+pkgname=wshowkeys
+version=0.1.0
+revision=1
+build_style=meson
+hostmakedepends="git pkg-config"
+makedepends="cairo-devel libinput-devel libxkbcommon-devel
+ pango-devel wayland-devel wayland-protocols libxkbcommon-devel"
+short_desc="Displays keys being pressed on a Wayland session"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-3.0-or-later"
+homepage="https://git.sr.ht/~sircmpwn/wshowkeys"
+
+do_fetch() {
+	git clone --depth 1 ${homepage} ${wrksrc}
+	commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
+	sed -i "/version: '0.1.0'/s/0.1.0/0.1.0-${commit_id}/" ${wrksrc}/meson.build
+}

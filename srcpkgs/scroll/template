@@ -10,7 +10,7 @@ maintainer="Dash Eclipse <dash@ezup.dev>"
 license="ISC"
 homepage="https://git.suckless.org/scroll"
 
-do_fetch(){
+do_fetch() {
 	git clone --depth 1 git://git.suckless.org/scroll ${wrksrc}
 	commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
 	sed -i "/^VERSION = /s/$/-${commit_id}/" ${wrksrc}/config.mk
