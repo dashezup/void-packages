@@ -1,7 +1,7 @@
 # Template file for 'wshowkeys'
 pkgname=wshowkeys
 version=0.1.0
-revision=1
+revision=3
 build_style=meson
 hostmakedepends="git pkg-config"
 makedepends="cairo-devel libinput-devel libxkbcommon-devel
@@ -10,6 +10,7 @@ short_desc="Displays keys being pressed on a Wayland session"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="GPL-3.0-or-later"
 homepage="https://git.sr.ht/~sircmpwn/wshowkeys"
+nocross="protocols/meson.build:10:1: ERROR: Program 'wayland-scanner' not found"
 
 do_fetch() {
 	git clone --depth 1 ${homepage} ${wrksrc}
