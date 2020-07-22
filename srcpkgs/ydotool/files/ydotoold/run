@@ -1,2 +1,3 @@
 #!/bin/sh
-exec ydotoold 2>&1
+## You may want to change root to your user
+exec chpst -u root:input /usr/bin/ydotoold 2>&1
