@@ -16,12 +16,11 @@ configure_args="-DTDESKTOP_API_ID=209235
  -DDESKTOP_APP_USE_PACKAGED_VARIANT=OFF
  -DDESKTOP_APP_USE_PACKAGED_GSL=OFF
  -DDESKTOP_APP_DISABLE_SPELLCHECK=$(vopt_if spellcheck 'false' 'true')"
-hostmakedepends="pkg-config qt5-qmake qt5-host-tools python qt5-devel"
+hostmakedepends="pkg-config qt5-qmake qt5-host-tools python qt5-devel qt5-wayland-devel"
 makedepends="alsa-lib-devel ffmpeg-devel libdbusmenu-glib-devel libopenal-devel
  minizip-devel opus-devel xxHash-devel pulseaudio-devel qt5-devel range-v3
  libva-devel rapidjson liblz4-devel liblzma-devel rlottie-devel gtk+3-devel
- MesaLib-devel libdbusmenu-qt5-devel $(vopt_if spellcheck hunspell-devel)
- qt5-wayland-devel"
+ MesaLib-devel libdbusmenu-qt5-devel qt5-wayland-devel $(vopt_if spellcheck hunspell-devel)"
 depends="qt5-imageformats qt5-core>=5.15.0<5.15.1"
 short_desc="Telegram Desktop messaging app"
 maintainer="John <me@johnnynator.dev>"
