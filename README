@@ -1,16 +1,16 @@
-Dash Eclipse's Void Linux Repository
-------------------------------------
+Dash Eclipse's Void Linux source packages collection
+----------------------------------------------------
 
-  [pkg]                 [git]   [patches/notes]
+[new]   [git]   [pkg]                   [patches/notes]
 
-* dwl                   *
-  dwm                           systray, nordtheme color
-  lilo                          keytab-lilo patch
-  pass                  *
-* scroll                *
-  slock                         scrollback, scrollback-mouse, nordtheme
-* wshowkeys             *
-  telegram-desktop      *	[not available]
-* trojan
-* wterm                 *
-* ydotool
+*       *       dwl
+                dwm                     systray, nordtheme color
+                lilo                    keytab-lilo patch
+        *       pass
+*               rig
+*       *       scroll
+                slock                   scrollback, scrollback-mouse, nordtheme
+*       *       wshowkeys
+                telegram-desktop        [not available]
+*       *       wterm
+*               ydotool

@@ -1,0 +1,21 @@
+# Template file for 'rig'
+pkgname=rig
+version=1.11
+revision=1
+build_style=gnu-makefile
+short_desc="Random identity generator"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-2.0-or-later"
+homepage="http://rig.sourceforge.net/"
+distfiles="${DEBIAN_SITE}/main/r/rig/${pkgname}_${version}.orig.tar.gz"
+checksum="00bfc970d5c038c1e68bc356c6aa6f9a12995914b7d4fda69897622cb5b77ab8"
+
+do_install() {
+	vbin rig
+	vman rig.6
+	vmkdir usr/share/rig
+	vcopy data/*.idx usr/share/rig
+	vlicense COPYING
+	vdoc Changelog
+	vdoc README
+}
