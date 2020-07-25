@@ -5,6 +5,7 @@ Dash Eclipse's Void Linux source packages collection
 
 *       *       dwl
                 dwm                     systray, nordtheme color
+*       *       https-dns-proxy         [not available]
                 lilo                    keytab-lilo patch
         *       pass
 *               rig
