@@ -1,17 +1,26 @@
 Dash Eclipse's Void Linux source packages collection
 ----------------------------------------------------
 
-[new]   [git]   [pkg]                   [patches/notes]
+Tags: #git #unavailable
 
-*       *       dwl
-                dwm                     systray, nordtheme color
-*       *       https-dns-proxy         [not available]
-                lilo                    keytab-lilo patch
-        *       pass
-*               rig
-*       *       scroll
-                slock                   scrollback, scrollback-mouse, nordtheme
-*       *       wshowkeys
-                telegram-desktop        [not available]
-*       *       wterm
-*               ydotool
+Modified packages
+-----------------
+
+	dwm	systray, nordtheme color
+	lilo	keytab-lilo patch
+	pass	#git
+	slock	scrollback, scrollback-mouse, nordtheme
+
+
+New packages
+------------
+
+	dwl			#git
+	https-dns-proxy		#git #unavailable
+	rig
+	scroll			#git
+	swaylock-effects
+	trojan
+	wshowkeys		#git
+	wterm			#git
+	ydotool
