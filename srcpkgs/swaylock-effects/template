@@ -16,6 +16,10 @@ wrksrc="${pkgname}-${version}-1"
 distfiles="${homepage}/archive/v${version}-1.tar.gz"
 checksum=d25a809e6cf013612a5c8bdd173ac17a72bd95a414221a3b3f9d60eae2c7ec33
 
+pre_build() {
+	[ -z "$CROSS_BUILD" ] || sed -i '/-mtune=native/d' meson.build
+}
+
 post_install() {
 	vlicense LICENSE
 }
