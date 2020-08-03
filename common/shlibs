@@ -69,16 +69,11 @@ libppl_c.so.4 ppl-0.11_1
 libstdc++.so.6 libstdc++-4.4.0_1
 libssp.so.0 libssp-4.4.0_1
 libncurses.so.6 ncurses-libs-6.0_1 ignore
-libncurses.so.5 ncurses-libs-6.0_1 ignore
 libncursesw.so.6 ncurses-libs-5.8_1 ignore
-libncursesw.so.5 ncurses-libs-5.8_1 ignore
 libtinfo.so.6 ncurses-libtinfo-libs-6.2_2
 libnetcdf.so.15 netcdf-4.7.0_1
-libformw.so.5 ncurses-libs-5.9_13 ignore
 libformw.so.6 ncurses-libs-5.8_1 ignore
-libpanelw.so.5 ncurses-libs-5.9_13 ignore
 libpanelw.so.6 ncurses-libs-5.8_1 ignore
-libmenuw.so.5 ncurses-libs-5.9_13 ignore
 libmenuw.so.6 ncurses-libs-5.8_1 ignore
 libobjc.so.4 libobjc-4.7.3_12
 libgomp.so.1 libgomp-4.4.0_1
@@ -869,6 +864,7 @@ liblua5.1.so.5.1 lua51-5.1.5_1
 liblua5.2.so.5.2 lua52-5.2.4_2
 liblua5.3.so.5.3 lua53-5.3.5_4
 liblua5.4.so.5.4 lua54-5.4.0_1
+libsurgescript.so.0.5.4.4 surgescript-0.5.4.4_2
 libburn.so.4 libburn-0.7.2_1
 libKF5Auth.so.5 kauth-5.26.0_1
 libKF5AuthCore.so.5 kauth-5.56.0_1
@@ -1056,12 +1052,12 @@ libtirpc.so.3 libtirpc-1.0.2_1
 librpcsecgss.so.3 librpcsecgss-0.19_1
 libnfsidmap.so.1 libnfsidmap-2.4.3_2
 libbind9.so.1600 bind-libs-9.16.2_1
-libdns.so.1603 bind-libs-9.16.3_1
+libdns.so.1605 bind-libs-9.16.5_1
 libirs.so.1601 bind-libs-9.16.3_1
-libisc.so.1603 bind-libs-9.16.3_1
+libisc.so.1605 bind-libs-9.16.5_1
 libisccc.so.1600 bind-libs-9.16.2_1
 libisccfg.so.1600 bind-libs-9.16.2_1
-libns.so.1603 bind-libs-9.16.3_1
+libns.so.1604 bind-libs-9.16.5_1
 libplist.so.3 libplist-1.12_1
 libplist++.so.3 libplist++-1.12_1
 libnsbmp.so.0 libnsbmp-0.0.3_1
@@ -2148,11 +2144,11 @@ libFcitxQt5WidgetsAddons.so.1 libfcitx-qt5-1.2.1_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
 liblastfm.so.1 liblastfm-1.0.9_1
 liblastfm_fingerprint.so.1 liblastfm-1.0.9_1
-libdruntime-ldc-debug-shared.so.91 ldc-runtime-1.21.0_1
-libdruntime-ldc-shared.so.91 ldc-runtime-1.21.0_1
-libphobos2-ldc-shared.so.91 ldc-runtime-1.21.0_1
-libphobos2-ldc-debug-shared.so.91 ldc-runtime-1.21.0_1
-libldc-jit.so.91 ldc-runtime-1.21.0_1
+libdruntime-ldc-debug-shared.so.92 ldc-runtime-1.22.0_1
+libdruntime-ldc-shared.so.92 ldc-runtime-1.22.0_1
+libphobos2-ldc-shared.so.92 ldc-runtime-1.22.0_1
+libphobos2-ldc-debug-shared.so.92 ldc-runtime-1.22.0_1
+libldc-jit.so.92 ldc-runtime-1.22.0_1
 libmarblewidget-qt5.so.28 marble5-17.12.2_1
 libastro.so.2 marble5-17.12.2_1
 libparrot.so.6.9.0 parrot-6.9.0_1
@@ -2961,25 +2957,25 @@ libkj-async-0.7.0.so capnproto-0.7.0_1
 libkj-test-0.7.0.so capnproto-0.7.0_1
 libkj-0.7.0.so capnproto-0.7.0_1
 libkea-asiodns.so.1 libkea-1.7.0_1
-libkea-asiolink.so.6 libkea-1.7.1_1
+libkea-asiolink.so.7 libkea-1.7.10_1
 libkea-cc.so.8 libkea-1.6.0_1
 libkea-cfgclient.so.9 libkea-1.7.5_1
 libkea-cryptolink.so.5 libkea-1.7.0_1
-libkea-database.so.4 libkea-1.7.2_1
-libkea-dhcp++.so.17 libkea-1.7.8_1
+libkea-database.so.5 libkea-1.7.10_1
+libkea-dhcp++.so.18 libkea-1.7.8_1
 libkea-dhcp_ddns.so.2 libkea-1.7.0_1
-libkea-dhcpsrv.so.25 libkea-1.7.9_1
+libkea-dhcpsrv.so.26 libkea-1.7.10_1
 libkea-dns++.so.4 libkea-1.7.9_1
 libkea-eval.so.12 libkea-1.7.0_1
 libkea-exceptions.so.0 libkea-1.1.0_1
-libkea-hooks.so.14 libkea-1.7.9_1
+libkea-hooks.so.15 libkea-1.7.10_1
 libkea-http.so.6 libkea-1.7.2_1
 libkea-log.so.6 libkea-1.7.9_1
 libkea-pgsql.so.1 libkea-1.7.9_1
-libkea-process.so.9 libkea-1.7.7_1
-libkea-stats.so.5 libkea-1.7.7_1
+libkea-process.so.10 libkea-1.7.10_1
+libkea-stats.so.6 libkea-1.7.10_1
 libkea-util-io.so.0 libkea-1.1.0_1
-libkea-util.so.14 libkea-1.7.9_1
+libkea-util.so.15 libkea-1.7.10_1
 libytnef.so.0 ytnef-1.8_1
 libpisock.so.9 pilot-link-0.12.5_1
 libpisync.so.1 pilot-link-0.12.5_1
@@ -3506,7 +3502,7 @@ libticalcs2.so.12 libticalcs2-1.1.9_1
 libhtmlcxx.so.3 htmlcxx-0.86_1
 libcss_parser_pp.so.0 htmlcxx-0.86_1
 libcss_parser.so.0 htmlcxx-0.86_1
-libaom.so.0 libaom-1.0.0_1
+libaom.so.2 libaom-2.0.0_1
 libre.so re-0.5.8_1
 libspandsp.so.2 spandsp-0.0.6_1
 libspa-alsa.so libspa-alsa-0.3.6_1
@@ -3631,9 +3627,11 @@ libtexpdf.so.0 libtexpdf-0.9.5_1
 libupstart.so.1 libupstart-1.13.3_1
 librtas.so.2 librtas-2.0.2_1
 librtasevent.so.2 librtas-2.0.2_1
-libbroker.so.0 bro-2.6.1_1
-libcaf_core.so.0.16.2 bro-2.6.1_1
-libcaf_openssl.so.0.16.2 bro-2.6.1_1
+libbroker.so.2 zeek-3.1.1_1
+libcaf_core.so.0.17.4 zeek-3.1.1_1
+libcaf_io.so.0.17.4 zeek-3.1.1_1
+libcaf_openssl.so.0.17.4 zeek-3.1.1_1
+libbinpac.so.0 zeek-3.1.1_1
 libllhttp.so.1 llhttp-1.0.1_1
 libpinyin.so.13 libpinyin-2.2.1_1
 libuhd.so.3.15.0 uhd-3.15.0.0_1
@@ -3667,7 +3665,7 @@ libOGDF.so libogdf-2018.03_1
 libCOIN.so libogdf-2018.03_1
 librocksdb.so.5 rocksdb-5.17.2_1
 libfrr.so.0 libfrr-6.0_1
-libkaccounts.so.1 kaccounts-integration-18.12.2_1
+libkaccounts.so.2 kaccounts-integration-20.04.3_1
 libfrrospfapiclient.so.0 libfrrospfapiclient-6.0_1
 liborocos-kdl.so.1.4 orocos-kdl-1.4.0_1
 libibumad.so.3 rdma-core-22.1_1
@@ -3939,12 +3937,12 @@ libcaribou.so.0 libcaribou-0.4.21_3
 libtinyclipboard.so.1 tinyclipboard-16.01_1
 libcbor.so.0.7 libcbor-0.7.0_1
 libfido2.so.1 libfido2-1.3.0_1
-libjanet.so.1.10 janet-1.10.0_1
+libjanet.so.1.11 janet-1.11.0_1
 libOpenImageDenoise.so.0 openimagedenoise-1.2.0_1
 libcbang0.so cbang-1.3.3_1
 libblosc.so.1 c-blosc-1.17.1_1
 libopenvdb.so.7.0 openvdb-7.0.0_1
-libAlembic.so.1.7 alembic-1.7.12_1
+libAlembic.so.1.7 alembic-1.7.13_1
 libmodsecurity.so.3 modsecurity-3.0.4_1
 libraven.so.0 budgie-desktop-10.5.1_1
 libbudgie-private.so.0 budgie-desktop-10.5.1_1
@@ -3979,5 +3977,7 @@ libtexluajit.so.2 texlive-LuaTeX-20200406_1
 libtexlua53.so.5 texlive-LuaTeX-20200406_1
 libptexenc.so.1 texlive-20200406_1
 libdolphinvcs.so.5 dolphin-20.04.3_1
+libcglm.so.0 cglm-0.7.6_1
+libfcft.so.3 fcft-2.2.2_1
 
 libydotool.so ydotool-devel-0.1.8_3
