@@ -10,6 +10,10 @@ homepage="http://rig.sourceforge.net/"
 distfiles="${DEBIAN_SITE}/main/r/rig/${pkgname}_${version}.orig.tar.gz"
 checksum="00bfc970d5c038c1e68bc356c6aa6f9a12995914b7d4fda69897622cb5b77ab8"
 
+pre_build() {
+	sed -i '/#include <assert.h>/a #include <string.h>' rig.cc
+}
+
 do_build() {
 	${CXX} -g rig.cc -o rig -Wall -DDATADIR=\"/usr/share/rig\"
 	sed s@DATADIR@/usr/share/rig@g < rig.6.in > rig.6
