@@ -17,6 +17,7 @@ New packages
 
 	dwl			#git
 	https-dns-proxy		#git #unavailable
+	python3-bpytop
 	rig
 	scroll			#git
 	swaylock-effects
