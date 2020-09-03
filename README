@@ -6,7 +6,7 @@ Tags: #git #unavailable
 Modified packages
 -----------------
 
-	dwm	systray, nordtheme color
+	dwm	systray, bottomstack, nordtheme-color
 	lilo	keytab-lilo patch
 	pass	#git
 	slock	scrollback, scrollback-mouse, nordtheme
