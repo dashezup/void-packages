@@ -121,6 +121,7 @@ static Key keys[] = {
         { 0,              0x1008ff12,spawn,          {.v = mutecmd } },
         { 0,              0x1008ff11,spawn,          {.v = lowervolcmd } },
         { 0,              0x1008ff13,spawn,          {.v = raisevolcmd } },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("dwm-helper.sh screenshot") },
 };
 
 /* button definitions */
