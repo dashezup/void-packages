@@ -1,7 +1,7 @@
 # Template file for 'dwm'
 pkgname=dwm
 version=6.2
-revision=8
+revision=9
 patch_args="-Np1"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 depends="slock st"

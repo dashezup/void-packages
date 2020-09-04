@@ -32,9 +32,16 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
-        { "Fcitx-config-gtk3",  NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "feh",      NULL,       NULL,       0,            1,           -1 },
+	{ "mpv",      NULL,       NULL,       0,            1,           -1 },
+	{ "uTox",     NULL,       NULL,       0,            1,           -1 },
+	{ "scrcpy",   NULL,       NULL,       0,            1,           -1 },
+	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
+	{ "DeltaChat",          NULL,       NULL,       0,            1,           -1 },
+	{ "utoxvideo",          NULL,       NULL,       0,            1,           -1 },
         { "TelegramDesktop",    NULL,       NULL,       1 << 3,       1,           -1 },
+        { "Fcitx-config-gtk3",  NULL,       NULL,       0,            1,           -1 },
         { "SimpleScreenRecorder", NULL,     NULL,       0,            1,           -1 },
         { "Audacity",             NULL,     NULL,       0,            1,           -1 },
 };
