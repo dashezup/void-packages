@@ -15,6 +15,7 @@ Modified packages
 New packages
 ------------
 
+	bpm-tools
 	dwl			#git
 	https-dns-proxy		#git #unavailable
 	python3-bpytop

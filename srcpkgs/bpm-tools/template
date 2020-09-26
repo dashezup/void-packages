@@ -1,0 +1,11 @@
+# Template file for 'bpm-tools'
+pkgname=bpm-tools
+version=0.3
+revision=1
+build_style=gnu-makefile
+short_desc="Tools to calculate tempo of audio tracks, display graphs and tag files with bpm value"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-2.0-or-later"
+homepage="http://www.pogo.org.uk/~mark/${pkgname}/"
+distfiles="${homepage}/releases/${pkgname}-${version}.tar.gz"
+checksum="37efe81ef594e9df17763e0a6fc29617769df12dfab6358f5e910d88f4723b94"
