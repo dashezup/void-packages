@@ -1,0 +1,39 @@
+# Template file for 'softethervpn'
+pkgname=softethervpn
+version=4.29
+revision=1
+version_full="${version}-9680-rtm"
+wrksrc="SoftEtherVPN_Stable-${version_full}"
+build_style=gnu-configure
+makedepends="readline-devel libressl-devel zlib-devel"
+short_desc="Multi-protocol VPN Program from University of Tsukuba"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="Apache-2.0"
+homepage="https://www.softether.org/"
+distfiles="https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/v${version_full}.tar.gz"
+checksum="c19cd49835c613cb5551ce66c91f90da3d3496ab3e15e8c61e22b464dc55d9b0"
+nocross="tmp/hamcorebuilder: cannot execute binary file"
+
+#pre_build() {
+	#case "$ARCH" in
+		#"aarch64*") cp src/makefiles/linux_64bit.mak Makefile && sed -i 's/ -m64//g' Makefile;;
+		#"ppc64*|x86_64*") cp src/makefiles/linux_64bit.mak Makefile;;
+		#*) cp src/makefiles/linux_32bit.mak Makefile;;
+	#esac
+#}
+
+do_install() {
+	vinstall bin/vpnserver/hamcore.se2 444 usr/share/softethervpn
+	#vinstall bin/vpnclient/lang.config 444 usr/share/softethervpn
+	vmkdir usr/libexec/softethervpn
+	ln -s ../../share/softethervpn/hamcore.se2 ${DESTDIR}/usr/libexec/softethervpn/hamcore.se2
+	#ln -s ../../share/softethervpn/lang.config ${DESTDIR}/usr/libexec/softethervpn/lang.config
+	vmkdir usr/bin
+	for cmd in vpnbridge vpnclient vpncmd vpnserver; do
+		vcopy bin/$cmd/$cmd usr/libexec/softethervpn
+		echo "#!/bin/sh" >$DESTDIR/usr/bin/$cmd
+		echo /usr/libexec/softethervpn/$cmd '"$@"' >>$DESTDIR/usr/bin/$cmd
+		echo 'exit $?' >>$DESTDIR/usr/bin/$cmd
+		chmod 755 $DESTDIR/usr/bin/$cmd
+	done
+}

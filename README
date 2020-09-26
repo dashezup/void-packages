@@ -23,8 +23,9 @@ New packages
 	rig
 	scroll			#git
 	sls			#security_risk
+	softethervpn		#nocross
 	swaylock-effects
 	trojan
-	wshowkeys		#git
+	wshowkeys		#git #nocross
 	wterm			#git
 	ydotool
