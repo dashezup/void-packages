@@ -18,10 +18,11 @@ New packages
 	bpm-tools
 	dwl			#git
 	https-dns-proxy		#git #unavailable
+	oggfwd			#git_archive
 	python3-bpytop
 	rig
 	scroll			#git
-	sls
+	sls			#security_risk
 	swaylock-effects
 	trojan
 	wshowkeys		#git
