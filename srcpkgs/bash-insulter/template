@@ -1,0 +1,14 @@
+# Template file for 'bash-insulter'
+pkgname=bash-insulter
+version=0.1
+revision=1
+build_style=fetch
+short_desc="Insults the user when typing wrong command"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/hkbakke/${pkgname}"
+
+do_install() {
+	$XBPS_FETCH_CMD https://raw.githubusercontent.com/hkbakke/bash-insulter/master/src/bash.command-not-found
+	vinstall bash.command-not-found 644 etc
+}
