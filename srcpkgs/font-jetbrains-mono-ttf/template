@@ -1,0 +1,17 @@
+# Template file for 'font-jetbrains-mono-ttf'
+pkgname=font-jetbrains-mono-ttf
+version=2.002
+revision=1
+wrksrc=ttf
+short_desc="Typeface for developers"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="OFL-1.1"
+homepage="https://jetbrains.com/mono"
+distfiles="https://github.com/JetBrains/JetBrainsMono/releases/download/v${version}/JetBrainsMono-${version}.zip"
+checksum="568ff44a4495773c5d204524e1a8442649b4b53b94e21e1a7d784289c2a19a51"
+
+do_install() {
+	font_dirs="/usr/share/fonts/TTF"
+	vmkdir $font_dirs
+	vcopy *.ttf $font_dirs
+}
