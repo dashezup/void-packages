@@ -8,3 +8,5 @@ rsync -rv --delete hostdir/binpkgs/aarch64 ../../repo/voidlinux/current/
 
 echo '\n\n### Updating git based xlocate database...\n'
 ../../repo/voidlinux/xlocate/xupdategit
+
+$(dirname $0)/gen-repoinfo.sh ../../repo/voidlinux/current
