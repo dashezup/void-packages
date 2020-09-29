@@ -1,0 +1,17 @@
+# Template file for 'stagit-gopher'
+pkgname=stagit-gopher
+version=0.9.4
+revision=1
+build_style=gnu-makefile
+make_install_args="MANPREFIX=/usr/share/man"
+makedepends="libgit2-devel"
+short_desc="Static git page generator for gopher"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://codemadness.org/stagit-gopher.html"
+distfiles="https://codemadness.org/releases/stagit-gopher/${pkgname}-${version}.tar.gz"
+checksum=afcbf4ddcd88454ff239b892365f5b0df8de442474e06b60adb0f94d45a3cd73
+
+post_install() {
+	vlicense LICENSE
+}

@@ -26,6 +26,7 @@ New packages
 	scroll			#git
 	sls			#security_risk
 	softethervpn		#nocross
+	stagit-gopher
 	swaylock-effects
 	trojan
 	wshowkeys		#git #nocross
