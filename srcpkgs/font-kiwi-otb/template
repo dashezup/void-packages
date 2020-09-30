@@ -1,0 +1,21 @@
+# Template file for 'font-kiwi-otb'
+pkgname=font-kiwi-otb
+version=0.1
+revision=1
+build_style=fetch
+hostmakedepends="fonttosfnt"
+depends="font-util"
+short_desc="monospaced bitmap font"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="0BSD"
+homepage="https://github.com/turquoise-hexagon/fonts"
+font_dirs="/usr/share/fonts/X11/misc"
+
+do_install() {
+	local _repo="https://raw.githubusercontent.com/turquoise-hexagon/fonts/22c550a88ecdd5e76bfdb5abe373a4ad0c0ddbcb"
+	$XBPS_FETCH_CMD "${_repo}/src/kiwi.bdf"
+	$XBPS_FETCH_CMD "${_repo}/LICENSE"
+	fonttosfnt -o kiwi.otb kiwi.bdf
+	vinstall kiwi.otb 644 /usr/share/fonts/X11/misc
+	vlicense LICENSE
+}

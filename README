@@ -19,6 +19,7 @@ New packages
 	bpm-tools
 	dwl			#git
 	font-jetbrains-mono-ttf	#binary
+	font-kiwi-otb		#fetch #git
 	https-dns-proxy		#git #unavailable
 	oggfwd			#git_archive
 	python3-bpytop
