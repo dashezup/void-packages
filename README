@@ -33,3 +33,5 @@ New packages
 	wterm			#git
 	ydotool
 	zsh-insulter		#fetch
+	zsh-theme-powerlevel10k	#nocross #binary_gitstatusd
+

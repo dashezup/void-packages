@@ -1,0 +1,29 @@
+# Template file for 'zsh-theme-powerlevel10k'
+pkgname=zsh-theme-powerlevel10k
+version=1.13.0
+revision=1
+wrksrc=powerlevel10k-${version}
+depends="zsh"
+makedepends="zsh curl tar"
+short_desc="Zsh theme emphasizes speed, flexibility and out-of-the-box experience"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/romkatv/powerlevel10k"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum="84e23f801523e8d4084f6c9a726d918433f6d6c8b91b1540e1f6ecbed2c40a73"
+nocross="gitstatusd binary"
+
+do_install() {
+	zsh -fc '
+		emulate zsh -o no_aliases
+		unset -m "GITSTATUS_*"
+		GITSTATUS_CACHE_DIR="$PWD"/gitstatus/usrbin ./gitstatus/install -f
+		'
+	for file in *.zsh-theme internal/*.zsh gitstatus/*.zsh gitstatus/install; do
+		zsh -fc "emulate zsh -o no_aliases && zcompile -R -- $file.zwc $file"
+	done
+	vbin gitstatus/usrbin/gitstatusd-linux-x86_64 gitstatusd
+	rm -rf gitstatus .git* LICENSE *.md */*.md *.png
+	vmkdir usr/share/${pkgname}
+	vcopy ./ usr/share/${pkgname}
+}
