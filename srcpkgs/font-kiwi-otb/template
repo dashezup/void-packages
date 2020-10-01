@@ -1,7 +1,7 @@
 # Template file for 'font-kiwi-otb'
 pkgname=font-kiwi-otb
 version=0.1
-revision=1
+revision=2
 build_style=fetch
 hostmakedepends="fonttosfnt"
 depends="font-util"
@@ -12,10 +12,11 @@ homepage="https://github.com/turquoise-hexagon/fonts"
 font_dirs="/usr/share/fonts/X11/misc"
 
 do_install() {
-	local _repo="https://raw.githubusercontent.com/turquoise-hexagon/fonts/22c550a88ecdd5e76bfdb5abe373a4ad0c0ddbcb"
+	local _commit="22c550a88ecdd5e76bfdb5abe373a4ad0c0ddbcb"
+	local _repo="https://raw.githubusercontent.com/turquoise-hexagon/fonts/${_commit}"
 	$XBPS_FETCH_CMD "${_repo}/src/kiwi.bdf"
 	$XBPS_FETCH_CMD "${_repo}/LICENSE"
 	fonttosfnt -o kiwi.otb kiwi.bdf
-	vinstall kiwi.otb 644 /usr/share/fonts/X11/misc
+	vinstall kiwi.otb 644 $font_dirs
 	vlicense LICENSE
 }
