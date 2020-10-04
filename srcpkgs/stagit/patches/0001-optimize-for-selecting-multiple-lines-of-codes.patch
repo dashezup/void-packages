@@ -1,0 +1,39 @@
+From 84c0c5077c703b2a8040aea9ac9f83075db0191c Mon Sep 17 00:00:00 2001
+From: Dash Eclipse <dash@ezup.dev>
+Date: Sun, 4 Oct 2020 21:36:01 +0000
+Subject: [PATCH] optimize for selecting multiple lines of codes
+
+---
+ stagit.c  | 2 +-
+ style.css | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/stagit.c b/stagit.c
+index d9e80a1..04f3ec9 100644
+--- a/stagit.c
++++ b/stagit.c
+@@ -503,7 +503,7 @@ int
+ writeblobhtml(FILE *fp, const git_blob *blob)
+ {
+ 	size_t n = 0, i, prev;
+-	const char *nfmt = "<a href=\"#l%d\" class=\"line\" id=\"l%d\">%7d</a> ";
++	const char *nfmt = "<a href=\"#l%d\" class=\"line\" id=\"l%d\">%7d</a>";
+ 	const char *s = git_blob_rawcontent(blob);
+ 	git_off_t len = git_blob_rawsize(blob);
+ 
+diff --git a/style.css b/style.css
+index d1cd6d3..e98fa99 100644
+--- a/style.css
++++ b/style.css
+@@ -30,6 +30,8 @@ a.line {
+ 
+ #blob a {
+ 	color: #777;
++	user-select: none;
++	margin-right: 7px;
+ }
+ 
+ #blob a:hover {
+-- 
+2.28.0
+
