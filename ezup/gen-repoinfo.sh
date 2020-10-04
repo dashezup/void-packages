@@ -26,19 +26,12 @@ git clone <a href="git://ezup.dev/void-packages.git">git://ezup.dev/void-package
 <b>How to Use</b>
 <b>----------</b>
 
-Generally if you find something in this repository might be useful to you,
-you should check related package template in my void-packages git repository,
-build it by yourself and optionally host it in your own repository.
-
-Some packages from official Void Linux repository may be replaced by the one
-from this repo if you use it directly, but if you really want to, here is the
-way:
-
 1. Copy the main repository configuration file to /etc/xbps.d
 
    # cp /usr/share/xbps.d/00-repository-main.conf /etc/xbps.d/00-repository-main.conf
 
-2. Insert corresponding repository at the beginning of 00-repository-main.conf
+2. To get packages which only includes in this repository,
+   add corresponding repository after your main repository
 
    # for x86_64-musl, armv7l-musl
    repository=<a href="https://ezup.dev/repo/voidlinux/current/musl" target="_blank">https://ezup.dev/repo/voidlinux/current/musl</a>
@@ -49,6 +42,12 @@ way:
 3. Synchronize repositories, install packages you need
 
    # xbps-install -S [PKG...]
+
+WARNING: You can replace a package from your main repository with the one
+which has the same name from this repository by insert this repository at the
+beginning of your repository configuration, but you will risking some of other
+packages also be replaced. I would recommend you to check related package
+template, build it by yourself and optionally self-host your own repository.
 
 
 <b>Packages</b>
