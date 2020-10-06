@@ -1,0 +1,18 @@
+# Template file for 'ScreenRotator'
+pkgname=ScreenRotator
+version=0.1
+revision=1
+archs="~armv7l-musl"
+build_style=cmake
+hostmakedepends="git qt5-devel"
+makedepends="qt5-x11extras-devel qt5-sensors-devel libXrandr-devel libXi-devel"
+short_desc="Automatic screen rotation daemon for X11"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/GuLinux/${pkgname}"
+
+do_fetch() {
+	local _commit="e1de8b72ad5eb9952db45c031e6c3292bfe028d2"
+	git clone --branch master ${homepage}.git ${wrksrc}
+	git -C ${wrksrc} reset --hard ${_commit}
+}
