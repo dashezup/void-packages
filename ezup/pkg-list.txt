@@ -1,0 +1,38 @@
+# sed '/^$/d; /^#/d' ezup/pkg-list.txt | awk '{print $1}' #| xargs -L1 ezup/build-pkg.sh
+
+
+# Tags: #git #fetch #binary #security #nocross
+
+
+# Modified packages
+
+	dwm	systray, bottomstack, nordtheme-color
+	lilo	keytab-lilo patch
+	pass	#git
+	slock	scrollback, scrollback-mouse, nordtheme
+	stagit	multiline-select
+
+
+# New packages
+
+	bash-insulter		#fetch
+	bpm-tools
+	dwl			#git
+	font-jetbrains-mono-ttf	#binary
+	font-kiwi-otb		#fetch #git
+#	https-dns-proxy		#git
+	oggfwd			#git_archive
+	python3-bpytop
+	rig
+	scroll			#git
+	sls			#security_risk
+	softethervpn		#nocross
+	stagit-gopher
+	swaylock-effects
+	trojan
+	wshowkeys		#git #nocross
+	wterm			#git
+	ydotool
+	zsh-insulter		#fetch
+	zsh-theme-powerlevel10k	#nocross #binary_gitstatusd
+

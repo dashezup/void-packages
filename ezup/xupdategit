@@ -1,0 +1,34 @@
+#!/bin/sh
+
+BASEDIR=$(realpath $(dirname $0))
+XLOCATE_GIT="$(realpath $BASEDIR/xlocate.git)"
+XLOCATE_REPO="$(realpath $BASEDIR/../current)"
+
+xupdategit() {
+	set -e
+	DIR=$(mktemp -dt xlocate.XXXXXX)
+	DIR=$(/usr/bin/realpath -e "$DIR")
+	git init -q $DIR
+	cd $DIR
+	xbps-query -i --repository="$XLOCATE_REPO" -M -Ro '*' | awk '
+		$0 ~ ": " {
+			s = index($0, ": ")
+			pkg = substr($0, 1, s-1)
+			file = substr($0, s+2)
+			sub(" *\\([^)]*\\)$", "", file)
+			print file >>pkg
+	       	}'
+	printf '%s\n' ./* |
+		LC_ALL= xargs -d'\n' -I'{}' -n1 -P "$(nproc)" -r -- \
+			sort -o {} {}
+	git add ./*
+	git -c user.name=xupdategit -c user.email=xupdategit@none commit -q -m 'xupdategit'
+	git repack -ad
+	rm -rf "$XLOCATE_GIT" .git/COMMIT_EDITMSG .git/description \
+		.git/index .git/hooks .git/logs
+	[ -n "${XLOCATE_GIT%/*}" ] && mkdir -p "${XLOCATE_GIT%/*}"
+	mv .git "$XLOCATE_GIT"
+	rm -rf "$DIR"
+}
+
+xupdategit
