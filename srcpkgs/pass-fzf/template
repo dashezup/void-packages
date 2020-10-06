@@ -1,0 +1,18 @@
+# Template file for 'pass-fzf'
+pkgname=pass-fzf
+version=0.1
+revision=1
+build_style=fetch
+short_desc="Fuzzy finder for pass"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/ficoos/${pkgname}"
+
+do_install() {
+	local _commit="c7871f38422f4eb515e4d67eae81e4e528dd7d58"
+	local _repo="https://raw.githubusercontent.com/ficoos/${pkgname}/${_commit}"
+	$XBPS_FETCH_CMD "${_repo}/fzf.bash"
+	$XBPS_FETCH_CMD "${_repo}/LICENSE"
+	vinstall fzf.bash 755 usr/lib/password-store/extensions
+	vlicense LICENSE
+}
