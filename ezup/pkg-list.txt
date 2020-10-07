@@ -1,7 +1,7 @@
 # sed '/^$/d; /^#/d' ezup/pkg-list.txt | awk '{print $1}' #| xargs -L1 ezup/build-pkg.sh
 
 
-# Tags: #git #fetch #binary #security #nocross
+# Tags: #git #fetch #binary #security #nocross #nonfree
 
 
 # Modified packages
@@ -11,6 +11,7 @@
 	pass	#git
 	slock	scrollback, scrollback-mouse, nordtheme
 	stagit	multiline-select
+#	unrar	#nonfree
 
 
 # New packages
