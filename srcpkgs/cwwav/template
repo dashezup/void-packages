@@ -1,0 +1,17 @@
+# Template file for 'cwwav'
+pkgname=cwwav
+version=0.4.1
+revision=1
+build_style=gnu-makefile
+makedepends="libsndfile-devel"
+short_desc="Command line tool to generate morse code sound files from text or stdin"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/sunny256/${pkgname}"
+distfiles="${homepage}/-/archive/${version}/${pkgname}-${version}.tar.gz"
+checksum="12256c41960bd2594cd986ae4041721f2f8e60686f3ae0b002d4787c232b720e"
+tags="ezup"
+
+do_install() {
+	vbin cwwav
+}

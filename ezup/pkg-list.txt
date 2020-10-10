@@ -19,6 +19,7 @@
 	ScreenRotator		#git
 	bash-insulter		#fetch
 	bpm-tools
+	cwwav
 	dwl			#git
 	font-jetbrains-mono-ttf	#binary
 	font-kiwi-otb		#fetch #git
