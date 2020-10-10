@@ -1,0 +1,14 @@
+# Template file for 'fuzzypkg'
+pkgname=fuzzypkg
+version=1.0.2
+revision=1
+short_desc="Install or remove xbps pkg through fzf fuzzy finder"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/zdykstra/${pkgname}"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum="f9aa5bd0d679f43d7d78654ba579fa460c5625b4504c4221a35a90623d59d90f"
+
+do_install() {
+	vbin fuzzypkg
+}
