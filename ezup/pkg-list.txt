@@ -23,6 +23,7 @@
 	font-jetbrains-mono-ttf	#binary
 	font-kiwi-otb		#fetch #git
 #	https-dns-proxy		#git
+	morse			#git
 	oggfwd			#git_archive
 	python3-bpytop
 	rig
