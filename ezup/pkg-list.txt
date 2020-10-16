@@ -21,6 +21,7 @@
 	bpm-tools
 	cwwav
 	dwl			#git
+	font-cascadia-code-ttf
 	font-jetbrains-mono-ttf	#binary
 	font-kiwi-otb		#fetch #git
 	fuzzypkg

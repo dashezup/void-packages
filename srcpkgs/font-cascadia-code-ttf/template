@@ -1,0 +1,32 @@
+# Template file for 'font-cascadia-code-ttf'
+pkgname=font-cascadia-code-ttf
+version=2009.22
+revision=1
+create_wrksrc=yes
+depends="font-util"
+short_desc="A monospaced font by Microsoft that includes programming ligatures - TTF"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="OFL-1.1"
+homepage="https://github.com/microsoft/cascadia-code"
+distfiles="https://github.com/microsoft/cascadia-code/releases/download/v${version}/CascadiaCode-${version}.zip"
+checksum="801bcc94b79ae46bc573c9c07feb44d581e12d15f79b176be165f00f8fdf9846"
+tags="ezup font"
+
+font_dirs="/usr/share/fonts/TTF"
+
+do_install() {
+	vmkdir usr/share/fonts/TTF
+	vcopy ttf/*.ttf usr/share/fonts/TTF
+
+	vmkdir usr/share/fonts/OTF
+	vcopy otf/static/*.otf usr/share/fonts/OTF
+}
+
+font-cascadia-code-otf_package() {
+	depends="font-util"
+	short_desc="A monospaced font by Microsoft that includes programming ligatures - OTF"
+	font_dirs="/usr/share/fonts/OTF"
+	pkg_install() {
+		vmove usr/share/fonts/OTF
+	}
+}
