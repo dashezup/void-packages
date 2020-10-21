@@ -1,7 +1,7 @@
 # Template file for 'dwm'
 pkgname=dwm
 version=6.2
-revision=10
+revision=11
 patch_args="-Np1"
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 depends="slock st"
@@ -11,6 +11,7 @@ license="MIT"
 homepage="http://dwm.suckless.org"
 distfiles="https://dl.suckless.org/dwm/dwm-${version}.tar.gz"
 checksum=97902e2e007aaeaa3c6e3bed1f81785b817b7413947f1db1d3b62b8da4cd110e
+tags="ezup"
 
 do_build() {
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h
