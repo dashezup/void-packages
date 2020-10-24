@@ -8,7 +8,7 @@
 
 	dwm	systray, bottomstack, nordtheme-color
 	lilo	keytab-lilo patch
-	pass	#git
+#	pass	#git
 	slock	scrollback, scrollback-mouse, nordtheme
 	stagit	multiline-select
 #	unrar	#nonfree
