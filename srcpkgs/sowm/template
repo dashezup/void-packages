@@ -1,0 +1,23 @@
+# Template file for 'sowm'
+pkgname=sowm
+version=1.6
+revision=1
+_commit="f4cb48d7afeda195a73ff2bfdd3f85a016d53cec"
+wrksrc="${pkgname}-${_commit}"
+build_style=gnu-makefile
+makedepends="libX11-devel"
+short_desc="Itsy bitsy floating window manager"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="MIT"
+homepage="https://github.com/dylanaraps/sowm"
+distfiles="https://github.com/dylanaraps/sowm/archive/${_commit}.tar.gz"
+checksum=8a1357780ab5865ad86b242a792024da76d73138aaeb26fb92f534e7411c441c
+tags="ezup gitpkg ${_commit}"
+
+pre_build() {
+	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h || true
+}
+
+post_install() {
+	vlicense LICENSE.md
+}
