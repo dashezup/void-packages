@@ -16,6 +16,7 @@
 
 # New packages
 
+	2bwm
 	ScreenRotator		#git
 	bash-insulter		#fetch
 	bpm-tools
@@ -33,6 +34,7 @@
 	scroll			#git
 	sls			#security_risk
 	softethervpn		#nocross
+	sowm
 	stagit-gopher
 	swaylock-effects
 	trojan
