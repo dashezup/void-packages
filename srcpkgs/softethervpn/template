@@ -1,7 +1,7 @@
 # Template file for 'softethervpn'
 pkgname=softethervpn
 version=4.29
-revision=1
+revision=2
 version_full="${version}-9680-rtm"
 wrksrc="SoftEtherVPN_Stable-${version_full}"
 build_style=gnu-configure
@@ -13,6 +13,7 @@ homepage="https://www.softether.org/"
 distfiles="https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/v${version_full}.tar.gz"
 checksum="c19cd49835c613cb5551ce66c91f90da3d3496ab3e15e8c61e22b464dc55d9b0"
 nocross="tmp/hamcorebuilder: cannot execute binary file"
+tags="ezup"
 
 #pre_build() {
 	#case "$ARCH" in

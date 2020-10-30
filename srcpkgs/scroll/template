@@ -1,7 +1,7 @@
 # Template file for 'scroll'
 pkgname=scroll
 version=0.1
-revision=2
+revision=3
 build_style=gnu-makefile
 hostmakedepends="git"
 makedepends="musl-legacy-compat"
@@ -9,9 +9,10 @@ short_desc="scrollbackbuffer program for st (git version)"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="ISC"
 homepage="https://git.suckless.org/scroll"
+_commit="708ce2abd91800b6ca637eb464ba6d78be74bf93"
+tags="ezup gitpkg ${_commit}"
 
 do_fetch() {
 	git clone --depth 1 git://git.suckless.org/scroll ${wrksrc}
-	commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
-	sed -i "/^VERSION = /s/$/-${commit_id}/" ${wrksrc}/config.mk
+	git -C ${wrksrc} reset --hard ${_commit}
 }

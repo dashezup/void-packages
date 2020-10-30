@@ -1,7 +1,7 @@
 # Template file for 'cwwav'
 pkgname=cwwav
 version=0.4.1
-revision=1
+revision=2
 build_style=gnu-makefile
 makedepends="libsndfile-devel"
 short_desc="Command line tool to generate morse code sound files from text or stdin"

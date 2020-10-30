@@ -1,8 +1,9 @@
 # sed '/^$/d; /^#/d' ezup/pkg-list.txt | awk '{print $1}' #| xargs -L1 ezup/build-pkg.sh
 
+# grep -r '^tags="ezup' srcpkgs/ | grep '/template:' | cut -d':' -f1 | cut -d'/' -f2 | sort
+# xbps-query -p tags -Rs ezup | cut -d: -f1 | xargs -L1 xbps-uhelper getpkgname | sort
 
 # Tags: #git #fetch #binary #security #nocross #nonfree
-
 
 # Modified packages
 

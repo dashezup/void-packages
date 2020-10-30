@@ -1,18 +1,18 @@
 # Template file for 'bash-insulter'
 pkgname=bash-insulter
 version=0.1
-revision=2
-build_style=fetch
+revision=3
+_commit="8c6d84a430741b35b9f6f9ca1f139eb0c1c93776"
+wrksrc="${pkgname}-${_commit}"
 short_desc="Insults the user when typing wrong command"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
 homepage="https://github.com/hkbakke/${pkgname}"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum="08ed2e9b3df22b95671a43c19d96600a4f21701e0ead6a41ded116fd7992eae5"
+tags="ezup gitpkg ${_commit}"
 
 do_install() {
-	local _commit="8c6d84a430741b35b9f6f9ca1f139eb0c1c93776"
-	local _repo="https://raw.githubusercontent.com/hkbakke/${pkgname}/${_commit}"
-	$XBPS_FETCH_CMD "${_repo}/src/bash.command-not-found"
-	$XBPS_FETCH_CMD "${_repo}/LICENSE"
-	vinstall bash.command-not-found 644 etc
+	vinstall src/bash.command-not-found 644 etc
 	vlicense LICENSE
 }

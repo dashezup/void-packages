@@ -1,16 +1,17 @@
 # Template file for 'zsh-insulter'
 pkgname=zsh-insulter
 version=0.1
-revision=2
-build_style=fetch
+revision=3
+_commit="92ab0610b388dd2fb5341f7ac58570f35956cb17"
+wrksrc="${pkgname}-${_commit}"
 short_desc="Insults the user when typing wrong command"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="Unknown"
 homepage="https://github.com/matmutant/${pkgname}"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum="ede0a2c4aec93232edd9624274e65f64a6b1f1e417c4a081e0a2295539ba8a2c"
+tags="ezup gitpkg ${_commit}"
 
 do_install() {
-	local _commit="92ab0610b388dd2fb5341f7ac58570f35956cb17"
-	local _repo="https://raw.githubusercontent.com/matmutant/${pkgname}/${_commit}"
-	$XBPS_FETCH_CMD "${_repo}/src/zsh.command-not-found"
-	vinstall zsh.command-not-found 644 etc
+	vinstall src/zsh.command-not-found 644 etc
 }

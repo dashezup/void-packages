@@ -1,7 +1,7 @@
 # Template file for 'zsh-theme-powerlevel10k'
 pkgname=zsh-theme-powerlevel10k
 version=1.13.0
-revision=1
+revision=2
 wrksrc=powerlevel10k-${version}
 depends="zsh"
 makedepends="zsh curl tar"
@@ -12,6 +12,7 @@ homepage="https://github.com/romkatv/powerlevel10k"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum="84e23f801523e8d4084f6c9a726d918433f6d6c8b91b1540e1f6ecbed2c40a73"
 nocross="gitstatusd binary"
+tags="ezup"
 
 do_install() {
 	zsh -fc '

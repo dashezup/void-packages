@@ -1,20 +1,18 @@
 # Template file for 'morse'
 pkgname=morse
 version=0
-revision=1
+revision=2
+_commit="0b202fdde0114e933e89b92a138f14e92bc48446"
+wrksrc="${pkgname}-${_commit}"
 build_style=gnu-makefile
 hostmakedepends="git"
 short_desc="Command-line tool for morse code translation"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
 homepage="https://github.com/mk12/${pkgname}"
-commit="0b202fdde0114e933e89b92a138f14e92bc48446"
-tags="ezup gitpkg ${commit}"
-
-do_fetch() {
-	git clone --branch master ${homepage}.git ${wrksrc}
-	git -C ${wrksrc} reset --hard ${commit}
-}
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum="9ef0ef248293fac11bf1a2382e32a3a1bb5329dcec707dc92607a1469f3eb1e2"
+tags="ezup gitpkg ${_commit}"
 
 do_install() {
 	vbin bin/morse

@@ -1,7 +1,9 @@
 # Template file for 'wterm'
 pkgname=wterm
 version=0.7
-revision=3
+revision=4
+_commit="18864b6da06f70a98e01d3e429287e54ef8db833"
+wrksrc="${pkgname}-${_commit}"
 archs="i686* x86_64*"
 build_style=gnu-makefile
 make_use_env=compliant
@@ -12,12 +14,9 @@ short_desc="st fork for wayland (git version)"
 maintainer="Dash Eclipse <dash@ezup.dev>"
 license="MIT"
 homepage="https://github.com/majestrate/wterm"
-
-do_fetch() {
-        git clone --depth 1 https://github.com/majestrate/wterm.git ${wrksrc}
-        commit_id=$(git -C ${wrksrc} rev-parse --short HEAD)
-        sed -i "/^VERSION/s/$/-${commit_id}/" ${wrksrc}/config.mk
-}
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum="f4e78a1a5fd7fb824b10836d41d98a9cb753bc5868ab37f2d8dd2e4a7a772960"
+tags="ezup gitpkg ${_commit}"
 
 do_install() {
         vbin wterm
