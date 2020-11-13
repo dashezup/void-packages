@@ -1,0 +1,24 @@
+# Template file for 'xrdp'
+pkgname=xrdp
+version=0.9.13.1
+revision=1
+archs="x86*" # cross compile for arm: lt-xrdp-keygen: cannot execute binary file: Exec format error
+patch_args="-Np1"
+build_style=gnu-configure
+configure_args="--disable-static --enable-fuse --disable-pam --enable-tjpeg"
+hostmakedepends="which autoconf automake libtool pkg-config git libjpeg-turbo-devel"
+makedepends="libressl-devel libX11-devel libXfixes-devel libXrandr-devel fuse-devel libjpeg-turbo-devel linux-headers nasm"
+short_desc="Open source RDP server"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="Apache-2.0"
+homepage="https://github.com/neutrinolabs/${pkgname}"
+distfiles="${homepage}/releases/download/v${version}/xrdp-${version}.tar.gz"
+checksum="e90a15404c060c378a91b3b51899415122e801863b8a00e4ea42a106b184108c"
+tags="ezup"
+
+pre_configure() {
+	case "$XBPS_TARGET_MACHINE" in
+		x86)	configure_args="configure_args --without-simd" ;;
+	esac
+	./bootstrap
+}
