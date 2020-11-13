@@ -45,6 +45,7 @@ static const Rule rules[] = {
         { "Fcitx-config-gtk3",  NULL,       NULL,       0,            1,           -1 },
         { "SimpleScreenRecorder", NULL,     NULL,       0,            1,           -1 },
         { "Audacity",             NULL,     NULL,       0,            1,           -1 },
+        { "Gnuplot",              NULL,     NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
