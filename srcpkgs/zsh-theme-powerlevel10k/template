@@ -1,7 +1,7 @@
 # Template file for 'zsh-theme-powerlevel10k'
 pkgname=zsh-theme-powerlevel10k
 version=1.13.0
-revision=2
+revision=4
 wrksrc=powerlevel10k-${version}
 depends="zsh"
 makedepends="zsh curl tar"
@@ -24,7 +24,7 @@ do_install() {
 		zsh -fc "emulate zsh -o no_aliases && zcompile -R -- $file.zwc $file"
 	done
 	vbin gitstatus/usrbin/gitstatusd-linux-x86_64 gitstatusd
-	rm -rf gitstatus .git* LICENSE *.md */*.md *.png
+	rm -rf .git* LICENSE *.md */*.md *.png gitstatus/usrbin
 	vmkdir usr/share/${pkgname}
 	vcopy ./ usr/share/${pkgname}
 }
