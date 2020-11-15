@@ -1,0 +1,11 @@
+CONTRIBUTING.md
+COPYING
+Manual.md
+common/
+etc/
+srcpkgs/base-files/
+srcpkgs/cross-aarch64-linux-musl
+srcpkgs/cross-aarch64-linux-musl-libc
+srcpkgs/gcc
+srcpkgs/xbps-triggers
+xbps-src

@@ -2,6 +2,7 @@
 
 # grep -r '^tags="ezup' srcpkgs/ | grep '/template:' | cut -d':' -f1 | cut -d'/' -f2 | sort
 # xbps-query -p tags -Rs ezup | cut -d: -f1 | xargs -L1 xbps-uhelper getpkgname | sort
+# cat ezup/upstream.txt | xargs -L1 git checkout github-voidlinux/master --
 
 # Tags: #git #fetch #binary #security #nocross #nonfree
 
@@ -19,6 +20,7 @@
 
 	2bwm
 	ScreenRotator		#git
+	ansifilter
 	bash-insulter		#fetch
 	bpm-tools
 	cwwav
@@ -42,6 +44,7 @@
 	trojan
 	wshowkeys		#git #nocross
 	wterm			#git
+	xrdp
 	ydotool
 	zsh-insulter		#fetch
 	zsh-theme-powerlevel10k	#nocross #binary_gitstatusd
