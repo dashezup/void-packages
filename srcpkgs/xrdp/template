@@ -1,7 +1,7 @@
 # Template file for 'xrdp'
 pkgname=xrdp
 version=0.9.13.1
-revision=1
+revision=2
 archs="x86*" # cross compile for arm: lt-xrdp-keygen: cannot execute binary file: Exec format error
 patch_args="-Np1"
 build_style=gnu-configure
@@ -18,7 +18,7 @@ tags="ezup"
 
 pre_configure() {
 	case "$XBPS_TARGET_MACHINE" in
-		x86)	configure_args="configure_args --without-simd" ;;
+		x86)	configure_args+=" --without-simd" ;;
 	esac
 	./bootstrap
 }
