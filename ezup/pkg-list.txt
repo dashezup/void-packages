@@ -45,6 +45,7 @@
 	wshowkeys		#git #nocross
 	wterm			#git
 	xrdp
+	yaft
 	ydotool
 	zsh-insulter		#fetch
 	zsh-theme-powerlevel10k	#nocross #binary_gitstatusd
