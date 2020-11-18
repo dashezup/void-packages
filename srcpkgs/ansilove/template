@@ -1,8 +1,9 @@
 # Template file for 'ansilove'
 pkgname=ansilove
 version=4.1.4
-revision=1
+revision=2
 build_style=cmake
+depends="libansilove"
 makedepends="libansilove"
 short_desc="ANSI and ASCII art to PNG converter in C"
 maintainer="Dash Eclipse <dash@ezup.dev>"
