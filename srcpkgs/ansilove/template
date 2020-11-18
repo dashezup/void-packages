@@ -1,0 +1,13 @@
+# Template file for 'ansilove'
+pkgname=ansilove
+version=4.1.4
+revision=1
+build_style=cmake
+makedepends="libansilove"
+short_desc="ANSI and ASCII art to PNG converter in C"
+maintainer="Dash Eclipse <dash@ezup.dev>"
+license="BSD-2-Clause"
+homepage="https://github.com/${pkgname}/${pkgname}"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum="e072efb0a79df060941520677192366c8635b113fe2d38860b261aee990467d3"
+tags="ezup"
