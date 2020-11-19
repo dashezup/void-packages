@@ -10,7 +10,7 @@ license="MIT"
 homepage="https://github.com/solusipse/fiche"
 distfiles="https://github.com/solusipse/fiche/archive/${version}.tar.gz"
 checksum=f0cb279a2c2a4c0d1debcf56785fd8731a1427d2524221678cf69c9aaa85e831
-tags="ezup"
+#tags="ezup"
 
 CFLAGS="-lpthread"
 

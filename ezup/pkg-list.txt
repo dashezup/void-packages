@@ -9,7 +9,7 @@
 # Modified packages
 
 	dwm	systray, bottomstack, nordtheme-color
-	fiche	change-timeout
+#	fiche	change-timeout
 	lilo	keytab-lilo patch
 #	pass	#git
 	slock	scrollback, scrollback-mouse, nordtheme
