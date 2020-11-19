@@ -1,0 +1,16 @@
+Changed timeout from 5 seconds to 500ms
+https://patch-diff.githubusercontent.com/raw/solusipse/fiche/pull/80.diff
+
+diff --git a/fiche.c b/fiche.c
+index c0bbe8d..5ff0b06 100644
+--- a/fiche.c
++++ b/fiche.c
+@@ -495,7 +495,7 @@ static void dispatch_connection(int socket, Fiche_Settings *settings) {
+     }
+ 
+     // Set timeout for accepted socket
+-    const struct timeval timeout = { 5, 0 };
++    const struct timeval timeout = { 0, 500 };
+ 
+     if ( setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout)) != 0 ) {
+         print_error("Couldn't set a timeout!");
