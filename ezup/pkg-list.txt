@@ -30,6 +30,7 @@
 	font-jetbrains-mono-ttf	#binary
 	font-kiwi-otb		#fetch #git
 	fuzzypkg
+	go.rice
 #	https-dns-proxy		#git
 	morse			#git
 	oggfwd			#git_archive
