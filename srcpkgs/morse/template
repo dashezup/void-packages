@@ -9,11 +9,12 @@ hostmakedepends="git"
 short_desc="Command-line tool for morse code translation"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
-homepage="https://github.com/mk12/${pkgname}"
+homepage="https://github.com/mk12/morse"
 distfiles="${homepage}/archive/${_commit}.tar.gz"
 checksum="9ef0ef248293fac11bf1a2382e32a3a1bb5329dcec707dc92607a1469f3eb1e2"
 tags="ezup gitpkg ${_commit}"
 
 do_install() {
 	vbin bin/morse
+	vlicense LICENSE.md
 }

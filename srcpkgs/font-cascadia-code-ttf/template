@@ -4,7 +4,7 @@ version=2009.22
 revision=2
 create_wrksrc=yes
 depends="font-util"
-short_desc="A monospaced font by Microsoft that includes programming ligatures - TTF"
+short_desc="Monospaced font by Microsoft - TTF"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="OFL-1.1"
 homepage="https://github.com/microsoft/cascadia-code"
@@ -24,7 +24,7 @@ do_install() {
 
 font-cascadia-code-otf_package() {
 	depends="font-util"
-	short_desc="A monospaced font by Microsoft that includes programming ligatures - OTF"
+	short_desc="Monospaced font by Microsoft - OTF"
 	font_dirs="/usr/share/fonts/OTF"
 	pkg_install() {
 		vmove usr/share/fonts/OTF

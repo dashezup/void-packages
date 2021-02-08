@@ -25,7 +25,6 @@ do_install() {
 	vman rig.6
 	vmkdir usr/share/rig
 	vcopy data/*.idx usr/share/rig
-	vlicense COPYING
 	vdoc Changelog
 	vdoc README
 }

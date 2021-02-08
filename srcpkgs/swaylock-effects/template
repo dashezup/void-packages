@@ -2,19 +2,19 @@
 pkgname=swaylock-effects
 version=1.6
 revision=2
-build_style=meson
 conf_files="/etc/pam.d/swaylock"
+wrksrc="${pkgname}-${version}-1"
+build_style=meson
 hostmakedepends="pkg-config wayland-devel scdoc git"
 makedepends="wayland-protocols cairo-devel gdk-pixbuf-devel pam-devel
  libxkbcommon-devel wayland-devel libomp-devel libgomp-devel"
-conflicts="swaylock"
 short_desc="Swaylock, with fancy effects"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
-homepage="https://github.com/mortie/${pkgname}"
-wrksrc="${pkgname}-${version}-1"
+homepage="https://github.com/mortie/swaylock-effects"
 distfiles="${homepage}/archive/v${version}-1.tar.gz"
 checksum=d25a809e6cf013612a5c8bdd173ac17a72bd95a414221a3b3f9d60eae2c7ec33
+conflicts="swaylock"
 tags="ezup"
 
 pre_build() {

@@ -3,8 +3,8 @@ pkgname=zsh-theme-powerlevel10k
 version=1.13.0
 revision=4
 wrksrc=powerlevel10k-${version}
-depends="zsh"
 makedepends="zsh curl tar"
+depends="zsh"
 short_desc="Zsh theme emphasizes speed, flexibility and out-of-the-box experience"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
@@ -27,4 +27,5 @@ do_install() {
 	rm -rf .git* LICENSE *.md */*.md *.png gitstatus/usrbin
 	vmkdir usr/share/${pkgname}
 	vcopy ./ usr/share/${pkgname}
+	vlicense LICENSE
 }

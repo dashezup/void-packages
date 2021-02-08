@@ -5,11 +5,12 @@ revision=2
 short_desc="Install or remove xbps pkg through fzf fuzzy finder"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
-homepage="https://github.com/zdykstra/${pkgname}"
+homepage="https://github.com/zdykstra/fuzzypkg"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum="f9aa5bd0d679f43d7d78654ba579fa460c5625b4504c4221a35a90623d59d90f"
 tags="ezup"
 
 do_install() {
 	vbin fuzzypkg
+	vlicense LICENSE
 }

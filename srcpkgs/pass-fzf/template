@@ -6,7 +6,7 @@ build_style=fetch
 short_desc="Fuzzy finder for pass"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
-homepage="https://github.com/ficoos/${pkgname}"
+homepage="https://github.com/ficoos/pass-fzf"
 
 do_install() {
 	local _commit="c7871f38422f4eb515e4d67eae81e4e528dd7d58"

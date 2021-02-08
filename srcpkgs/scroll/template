@@ -5,7 +5,7 @@ revision=3
 build_style=gnu-makefile
 hostmakedepends="git"
 makedepends="musl-legacy-compat"
-short_desc="scrollbackbuffer program for st (git version)"
+short_desc="Scrollbackbuffer program for st (git version)"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="ISC"
 homepage="https://git.suckless.org/scroll"
@@ -15,4 +15,8 @@ tags="ezup gitpkg ${_commit}"
 do_fetch() {
 	git clone --depth 1 git://git.suckless.org/scroll ${wrksrc}
 	git -C ${wrksrc} reset --hard ${_commit}
+}
+
+post_install() {
+	vlicense LICENSE
 }

@@ -3,7 +3,6 @@ pkgname=xrdp
 version=0.9.13.1
 revision=2
 archs="x86*" # cross compile for arm: lt-xrdp-keygen: cannot execute binary file: Exec format error
-patch_args="-Np1"
 build_style=gnu-configure
 configure_args="--disable-static --enable-fuse --disable-pam --enable-tjpeg"
 hostmakedepends="which autoconf automake libtool pkg-config git libjpeg-turbo-devel"
@@ -11,9 +10,10 @@ makedepends="libressl-devel libX11-devel libXfixes-devel libXrandr-devel fuse-de
 short_desc="Open source RDP server"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="Apache-2.0"
-homepage="https://github.com/neutrinolabs/${pkgname}"
+homepage="https://github.com/neutrinolabs/xrdp"
 distfiles="${homepage}/releases/download/v${version}/xrdp-${version}.tar.gz"
 checksum="e90a15404c060c378a91b3b51899415122e801863b8a00e4ea42a106b184108c"
+patch_args="-Np1"
 tags="ezup"
 
 pre_configure() {

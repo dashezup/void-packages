@@ -6,7 +6,7 @@ revision=1
 build_style=cmake
 hostmakedepends="git"
 makedepends="c-ares-devel libcurl-devel libev-devel"
-short_desc="A lightweight DNS-over-HTTPS proxy"
+short_desc="Lightweight DNS-over-HTTPS proxy"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
 homepage="https://github.com/aarond10/https_dns_proxy"
@@ -17,4 +17,5 @@ do_fetch() {
 
 do_install() {
 	vbin build/https_dns_proxy
+	vlicense LICENSE
 }

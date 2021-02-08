@@ -9,7 +9,11 @@ makedepends="ncurses-devel"
 short_desc="Yet Another Framebuffer Terminal"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
-homepage="https://github.com/uobikiemukot/${pkgname}"
+homepage="https://github.com/uobikiemukot/yaft"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum="80f7e6937ff0a34f77859c684d6f8e23c55d696e0bac4ac8b2f11f785db0374c"
 tags="ezup"
+
+post_install() {
+	vlicense LICENSE
+}

@@ -3,12 +3,12 @@ pkgname=dwl
 version=0.1
 revision=3
 _commit="44ef698d6ef48a41b0df7c4c47d8b880efdbdf33"
-build_style=gnu-makefile
 wrksrc="${pkgname}-${_commit}"
+build_style=gnu-makefile
 make_use_env=yes
 hostmakedepends="git pkg-config wayland-devel"
 makedepends="wayland-protocols wlroots-devel xcb-util-errors-devel xcb-util-wm-devel"
-short_desc="dwm for Wayland (git version)"
+short_desc="DWM for Wayland (git version)"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/djpohly/dwl"
@@ -17,5 +17,5 @@ checksum="a9edf25f4774c944ba42b57216f01826ab71d08326f4a6321dfb7e569eab7370"
 tags="ezup gitpkg ${_commit}"
 
 do_install() {
-        vinstall dwl 755 /usr/bin
+	vbin dwl
 }

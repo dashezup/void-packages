@@ -8,10 +8,14 @@ go_import_path="
  github.com/GeertJohan/${pkgname}/rice"
 # /void-packages/common/hooks/pre-pkg/04-generate-runtime-deps.sh: line 77: awk: command not found
 hostmakedepends="awk"
-short_desc="Go package that makes working with resources such as html,js,css,images,templates, etc very easy"
+short_desc="Tool for embedding web resources into Go executables"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="BSD-2-Clause"
 homepage="https://github.com/GeertJohan/go.rice"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=540cb64258fc2422664c73454b5dbaac5487a45906c935d25285a2a60085d877
 tags="ezup"
+
+post_install() {
+	vlicense LICENSE
+}

@@ -8,7 +8,11 @@ makedepends="gd-devel"
 short_desc="Library for converting ANSI, ASCII, and other formats to PNG"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="BSD-2-Clause"
-homepage="https://github.com/ansilove/${pkgname}"
+homepage="https://github.com/ansilove/libansilove"
 distfiles="${homepage}/archive/${version}.tar.gz"
 checksum="ef02eda605e3b38edbeac5874f2de22201db123cb7aab9228fd05cb288d0c0bc"
 tags="ezup"
+
+post_install() {
+	vlicense LICENSE
+}

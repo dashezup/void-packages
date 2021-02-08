@@ -2,7 +2,6 @@
 pkgname=fiche
 version=0.9.1
 revision=3
-patch_args="-Np1"
 build_style=gnu-makefile
 short_desc="Command line pastebin server for sharing terminal output"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
@@ -10,6 +9,7 @@ license="MIT"
 homepage="https://github.com/solusipse/fiche"
 distfiles="https://github.com/solusipse/fiche/archive/${version}.tar.gz"
 checksum=f0cb279a2c2a4c0d1debcf56785fd8731a1427d2524221678cf69c9aaa85e831
+patch_args="-Np1"
 #tags="ezup"
 
 CFLAGS="-lpthread"

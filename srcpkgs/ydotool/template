@@ -16,4 +16,5 @@ tags="ezup"
 post_install() {
 	vinstall ${FILESDIR}/80-uinput.rules 644 usr/lib/udev/rules.d
 	vsv ydotoold
+	vlicense LICENSE
 }

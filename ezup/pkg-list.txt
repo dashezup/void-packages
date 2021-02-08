@@ -35,7 +35,6 @@
 	morse			#git
 	oggfwd			#git_archive
 	ps_mem
-	python3-bpytop
 	rig
 	scroll			#git
 	sls			#security_risk
