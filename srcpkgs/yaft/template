@@ -7,7 +7,7 @@ build_style=gnu-makefile
 make_install_args="PREFIX=/destdir/${pkgname}-${version}/usr"
 makedepends="ncurses-devel"
 short_desc="Yet Another Framebuffer Terminal"
-maintainer="Dash Eclipse <dash@ezup.dev>"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
 homepage="https://github.com/uobikiemukot/${pkgname}"
 distfiles="${homepage}/archive/v${version}.tar.gz"

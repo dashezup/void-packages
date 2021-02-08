@@ -9,7 +9,7 @@ makedepends="wayland-protocols cairo-devel gdk-pixbuf-devel pam-devel
  libxkbcommon-devel wayland-devel libomp-devel libgomp-devel"
 conflicts="swaylock"
 short_desc="Swaylock, with fancy effects"
-maintainer="Dash Eclipse <dash@ezup.dev>"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
 homepage="https://github.com/mortie/${pkgname}"
 wrksrc="${pkgname}-${version}-1"

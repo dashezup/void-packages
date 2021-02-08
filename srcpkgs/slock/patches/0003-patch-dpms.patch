@@ -1,7 +1,7 @@
 https://tools.suckless.org/slock/patches/dpms/
 
 From 7c0aadbed47bff19657ed4b4555d1f554ef50293 Mon Sep 17 00:00:00 2001
-From: Dash Eclipse <dash@ezup.dev>
+From: Dash Eclipse <dashezup@disroot.org>
 Date: Thu, 16 Jul 2020 10:16:08 +0000
 Subject: [PATCH 3/3] patch dpms
 

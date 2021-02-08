@@ -11,7 +11,7 @@ hostmakedepends="git"
 depends="bash gnupg2 tree"
 #checkdepends="${depends} git"
 short_desc="Stores, retrieves, generates, and synchronizes passwords securely (git version)"
-maintainer="Dash Eclipse <dash@ezup.dev>"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.passwordstore.org"
 

@@ -7,7 +7,7 @@ hostmakedepends="git pkg-config"
 makedepends="cairo-devel libinput-devel libxkbcommon-devel
  pango-devel wayland-devel wayland-protocols libxkbcommon-devel"
 short_desc="Displays keys being pressed on a Wayland session"
-maintainer="Dash Eclipse <dash@ezup.dev>"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="GPL-3.0-or-later"
 homepage="https://git.sr.ht/~sircmpwn/wshowkeys"
 nocross="protocols/meson.build:10:1: ERROR: Program 'wayland-scanner' not found"

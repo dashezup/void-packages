@@ -4,7 +4,7 @@ version=0.1
 revision=1
 build_style=fetch
 short_desc="Fuzzy finder for pass"
-maintainer="Dash Eclipse <dash@ezup.dev>"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
 homepage="https://github.com/ficoos/${pkgname}"
 
