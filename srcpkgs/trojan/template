@@ -1,11 +1,11 @@
 # Template file for 'trojan'
 pkgname=trojan
 version=1.16.0
-revision=7
+revision=8
 wrksrc="${pkgname}-${version}"
 build_style="cmake"
-configure_args="-DENABLE_MYSQL=OFF -DENABLE_SSL_KEYLOG=OFF -DENABLE_TLS13_CIPHERSUITES=OFF -DSYSTEMD_SERVICE=OFF"
-makedepends="boost-devel libressl-devel"
+configure_args="-DENABLE_MYSQL=OFF -DENABLE_SSL_KEYLOG=OFF -DSYSTEMD_SERVICE=OFF"
+makedepends="boost-devel openssl-devel"
 short_desc="Unidentifiable mechanism that helps you bypass GFW"
 maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="GPL-3.0-or-later"
