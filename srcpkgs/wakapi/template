@@ -1,0 +1,13 @@
+# Template file for 'wakapi'
+pkgname=wakapi
+version=1.26.5
+revision=1
+build_style=go
+go_import_path="github.com/muety/${pkgname}"
+short_desc="Minimalist WakaTime-compatible backend for coding statistics"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/muety/wakapi"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum="52db3f24702cf4d9c0cd488768c6f746aed6f25759abf4bef7097a5b75e42299"
+tags="ezup"
