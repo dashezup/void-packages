@@ -3,7 +3,7 @@
 check_pkg_arch() {
     local cross="$1" _arch f match nonegation
 
-    if [ -n "$archs" -a "${archs// /}" != "noarch" ]; then
+    if [ -n "$archs" ]; then
         if [ -n "$cross" ]; then
             _arch="$XBPS_TARGET_MACHINE"
         elif [ -n "$XBPS_ARCH" ]; then
@@ -21,7 +21,7 @@ check_pkg_arch() {
             esac
         done
         if [ -z "$nonegation" -a -n "$match" ] || [ -n "$nonegation" -a -z "$match" ]; then
-            msg_red "$pkgname: this package cannot be built for ${_arch}.\n"
+            msg_red "${pkgname}-${version}_${revision}: this package cannot be built for ${_arch}.\n"
             exit 2
         fi
     fi
