@@ -1,0 +1,13 @@
+# Template file for 'wakatime_exporter'
+pkgname=wakatime_exporter
+version=0.1.0
+revision=1
+build_style=go
+go_import_path="github.com/MacroPower/${pkgname}"
+short_desc="Exports Prometheus metrics from Wakatime"
+maintainer="Dash Eclipse <dashezup@disroot.org>"
+license="Apache-2.0"
+homepage="https://github.com/MacroPower/wakatime_exporter"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum="44b50aa4dfa31e333115dbc7af3efc61148e746ce36dc1887722a6a76009450d"
+tags="ezup"
