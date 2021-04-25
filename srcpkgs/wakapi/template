@@ -1,7 +1,7 @@
 # Template file for 'wakapi'
 pkgname=wakapi
 version=1.26.5
-revision=2
+revision=3
 build_style=go
 go_import_path="github.com/muety/${pkgname}"
 short_desc="Minimalist WakaTime-compatible backend for coding statistics"
@@ -13,5 +13,6 @@ checksum="52db3f24702cf4d9c0cd488768c6f746aed6f25759abf4bef7097a5b75e42299"
 tags="ezup"
 
 post_install() {
+	sed -i '1 s/development/production/' config.default.yml
 	vconf config.default.yml wakapi.yml
 }
