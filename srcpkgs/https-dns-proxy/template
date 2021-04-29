@@ -2,7 +2,7 @@
 pkgname=https-dns-proxy
 version=0.1
 revision=2
-_commit=3402e458a656997ba8595cebe255f7f25875191c
+_commit=dfbf521c69fd9e96ee9e72670ddb2a49d8f12bdc
 wrksrc="https_dns_proxy-${_commit}"
 build_style=cmake
 hostmakedepends="git"
@@ -12,7 +12,7 @@ maintainer="Dash Eclipse <dashezup@disroot.org>"
 license="MIT"
 homepage="https://github.com/aarond10/https_dns_proxy"
 distfiles="${homepage}/archive/${_commit}.tar.gz"
-checksum=01142727eb5b24db9ee209de21eb67c9a0f7179ccfc5e637efe9a3c146c63975
+checksum=3c5d8b328cc94be97637d7b11aff6dfd45b943973b80d7a44f0ec4496e5602cc
 
 do_install() {
 	vbin build/https_dns_proxy
