@@ -26,6 +26,7 @@
 	bpm-tools
 	cwwav
 	dwl			#git
+	filebrowser
 	font-cascadia-code-ttf
 	font-jetbrains-mono-ttf	#binary
 	font-kiwi-otb		#fetch #git
@@ -43,6 +44,8 @@
 	stagit-gopher
 	swaylock-effects
 	trojan
+	wakapi
+	wakatime_exporter
 	wshowkeys		#git #nocross
 	wterm			#git
 	xrdp

@@ -33,7 +33,7 @@ git clone <a href="git://ezup.dev/void-packages.git">git://ezup.dev/void-package
 2. To get packages which only includes in this repository,
    add this repository after your main one
 
-   # x86_64-musl, aarch64-musl, armv7l-musl
+   # aarch64 aarch64-musl armv7l armv7l-musl x86_64 x86_64-musl
    repository=<a href="https://ezup.dev/repo/voidlinux/current" target="_blank">https://ezup.dev/repo/voidlinux/current</a>
 
 3. Synchronize repositories, install packages you need
@@ -52,8 +52,8 @@ template, build it by yourself and optionally self-host your own repository.
 
 EOF
 
-	ls -v1 $REPODIR/*.x86_64-musl.xbps $REPODIR/*.noarch.xbps \
-		| xargs -I{} basename {} | sed 's/.\(x86_64-musl\|noarch\).xbps$//' \
+	ls -v1 $REPODIR/*.x86_64.xbps $REPODIR/*.noarch.xbps \
+		| xargs -I{} basename {} | sed 's/.\(x86_64\|noarch\).xbps$//' \
 		| rev | sed 's/-/ /; s/_/ - /' | rev \
 		| tac | sort -uk1,1 \
 		| column -t -R4 \
@@ -78,7 +78,7 @@ _EOF
 }
 
 if [ ! -z $1 ]; then
-	[ -f $1/x86_64-musl-repodata ] || { echo "$1 is not a valid repo" && exit 0; }
+	[ -f $1/x86_64-repodata ] || { echo "$1 is not a valid repo" && exit 0; }
 	REPODIR=$1
 	get_info_html >$REPODIR/info.html
 else

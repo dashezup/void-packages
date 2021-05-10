@@ -2,8 +2,8 @@
 
 ## https://github.com/void-linux/void-infrastructure/blob/master/ansible/roles/buildmaster/templates/xbps-sign-repos.sh.j2
 
-REPO="$PWD/hostdir/binpkgs"
-ARCHS="x86_64-musl armv7l-musl aarch64-musl"
+REPO="$PWD/hostdir/binpkgs/ezupdev"
+ARCHS="aarch64 aarch64-musl armv7l armv7l-musl x86_64 x86_64-musl"
 
 export XBPS_PASSPHRASE="$XBPS_PASSPHRASE"
 for x in ${ARCHS}; do
